@@ -5,7 +5,7 @@
 
 int ReadInt(string message)
 {
-    Console.Write(message);
+    System.Console.Write(message);
     int result = Convert.ToInt32(Console.ReadLine());
     return result;
 }
@@ -13,14 +13,14 @@ int ReadInt(string message)
 int Number(int n, int m)
 {
     if (n == m) return n;
-    else Console.Write($"{Number(n, m + 1)}, ");
+    else System.Console.Write($"{Number(n, m + 1)}, ");
     return m;
 }
 
 int n = ReadInt("Введите число: ");
 if (n < 1)
 {
-    Console.WriteLine("Ввдите положительное число!");
+    System.Console.WriteLine("Ввдите положительное число!");
     return;
 }
-Console.WriteLine(Number(n, 1));
+System.Console.WriteLine(Number(n, 1));
